@@ -1,0 +1,13 @@
+.fundo {background-color: #E5E5E5;}
+    
+.card {height:146px;
+    width: 117px;
+    background-color: #A7E9AF;
+    border-radius: 5px;
+    transition: transform .5s;
+
+}
+
+.flip {
+    transform:rotateY(180deg);
+}
