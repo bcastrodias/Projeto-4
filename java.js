@@ -21,11 +21,11 @@ parrots = ['bobrossparrot',
 //Pareamento
 
 function EvenCards(cartas){
-    let pares = []
-    let p = 0
+    let pares = [];
+    let p = 0;
     for(let i = 0; i<cartas; i<pares.length){
-        pares.push(parrots[i]);
-        pares.push(parrots[i]);
+        pares.push(parrots[j]);
+        pares.push(parrots[j]);
        j++;
 }
     }
@@ -40,13 +40,18 @@ pares.sort(rng)
         
 
 //Criar cartas
-function cardCreate(cartas){
+function cardCreate(ativos){
  document.querySelector("fundo").innerHTML = "";
-   for (let p = 0; p < cartas; p++){
-    const newParrot = `
-    <div class="card" onclick:> 
-    <img src="${parrots[p]}.gif"/>
-    </div>  `;
-document.querySelector("fundo").innerHTML += newParrot}
-
+   for (let k = 0; k < ativos; k++){
+    document.querySelector(".game").innerHTML += `
+            <div class="${ativos[k]}" onclick="selectCard(this);" data-identifier="card">
+                <div class="back" data-identifier="back-face">
+                    <img src="images/back.png">
+                </div>
+                <div class="front" data-identifier="front-face">
+                    <img src="images/${ativos[k]}.gif">
+                </div>
+            </div>        
+        `;
+    }
 }
