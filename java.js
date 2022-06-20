@@ -1,4 +1,6 @@
 //Função para começar o jogo
+let pares = []
+let cartas
 
 function GameStart(){
     cartas = prompt("Selecione número par entre 4 e 14")
@@ -9,7 +11,7 @@ GameStart();
 
 //Array de Parrots
 
-parrots = ['bobrossparrot',
+const parrots = ['bobrossparrot',
 'explodyparrot',
 'fiestaparrot',
 'metalparrot',
@@ -20,38 +22,39 @@ parrots = ['bobrossparrot',
 
 //Pareamento
 
-function EvenCards(cartas){
-    let pares = [];
-    let p = 0;
-    for(let i = 0; i<cartas; i<pares.length){
-        pares.push(parrots[j]);
-        pares.push(parrots[j]);
-       j++;
+function EvenCards(){
+    
+    
+    for(let i = 0; i<cartas/2; i++){
+        pares.push(parrots[i]);
+        pares.push(parrots[i]);
+
 }
     }
+EvenCards()
 
 //Fator aleatorizante
 
-function rng(){
-    Math.random() - 0.5;
+
+
+pares.sort(()=>{
+const random=Math.random()
+
+if(random > 0.5){
+return 1
+} else {
+    return - 1
 }
 
-pares.sort(rng)
+})
         
 
 //Criar cartas
-function cardCreate(ativos){
- document.querySelector("fundo").innerHTML = "";
-   for (let k = 0; k < ativos; k++){
-    document.querySelector(".game").innerHTML += `
-            <div class="${ativos[k]}" onclick="selectCard(this);" data-identifier="card">
-                <div class="back" data-identifier="back-face">
-                    <img src="images/back.png">
-                </div>
-                <div class="front" data-identifier="front-face">
-                    <img src="images/${ativos[k]}.gif">
-                </div>
-            </div>        
-        `;
-    }
+function cardCreate(){
+   for (let p = 0; p < cartas; p++){
+   document.querySelector(".fundo").innerHTML +=
+    `<div class="card" id="${pares[p]}"> 
+        <img src="./img/${pares[p]}.gif"/>
+     </div> `;}
 }
+cardCreate()
