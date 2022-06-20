@@ -25,7 +25,7 @@ function EvenCards(cartas){
     for(let i = 0; i<cartas; i<pares.length){
         pares.push(parrots[i]);
         pares.push(parrots[i]);
-        i++
+        i = i + 2;
 }
     }
 
@@ -39,15 +39,13 @@ pares.sort(rng)
         
 
 //Criar cartas
-/*function cardCreate(cartas){
+function cardCreate(cartas){
  document.querySelector("fundo").innerHTML = "";
-   for (let p = 0; p < cards.length
-
-   
+   for (let p = 0; p < cartas; p++){
     const newParrot = `
-    <div class="card" onclick:> <img src="${p}.gif"/>
-    
-    </div>
-    `
+    <div class="card" onclick:> 
+    <img src="${parrots[p]}.gif"/>
+    </div>  `;
+document.querySelector("fundo").innerHTML += newParrot}
 
 }
