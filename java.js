@@ -22,10 +22,11 @@ parrots = ['bobrossparrot',
 
 function EvenCards(cartas){
     let pares = []
+    let p = 0
     for(let i = 0; i<cartas; i<pares.length){
         pares.push(parrots[i]);
         pares.push(parrots[i]);
-        i = i + 2;
+       j++;
 }
     }
 
